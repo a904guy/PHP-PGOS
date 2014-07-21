@@ -7,7 +7,7 @@ abstract class PGOS_Interface
     private                     $__pgos_dynamic_data = array();
     private                     $__pgos_object_loaded = false;
     private                     $__pgos_object_changed = false;
-    public function              __get($k)
+    public function              &__get($k)
     {
         if(property_exists($this,$k))
         {

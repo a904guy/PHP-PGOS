@@ -141,6 +141,10 @@ Please fork, add adapters, performance fixes, anything. We welcome the love.
 Thanks,
 ~@ndy
 
+=========
 
+# License
+### Creative Commons Attribution-ShareAlike 3.0 Unported
+http://creativecommons.org/licenses/by-sa/3.0/
 
 

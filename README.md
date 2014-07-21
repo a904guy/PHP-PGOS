@@ -1,10 +1,9 @@
 #PHP-PGOS
-=========
 
 ##PHP: Persistent Generic Object Storage
 
 ##Features
-- Automatic Persistent Generic Object Storage
+- NoSQL Style Persistent Generic Object Storage
 - Easy to use / code, simply extend the desired adapter
 - Saves / Loads the objects dynamic data automatically
 - Extendable, contribute your own adapter easily
@@ -12,8 +11,8 @@
 ##Future (TODO)
 - Autoloader Class
 - Composer
-- Mysql / Postgres / ElasticSearch / Redis Adapters
-- Another interface between adapaters that collects them all so __save __load is sync and can utilize a single connection
+- Mysql, Postgres, ElasticSearch, Redis Adapters
+- Single context to __save __load methods.
 
 =========
 

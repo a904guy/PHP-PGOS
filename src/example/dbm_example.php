@@ -20,20 +20,20 @@ class User extends PGOS_BerkeleyDB {
 
 $user = new User(1);
 
-//$user->name = 'Andy Hawkins';
-//$user->company = 'BombSquad Inc';
-//$user->occupation = 'Cylon';
+$user->name = 'Andy Hawkins';
+$user->company = 'BombSquad Inc';
+$user->occupation = 'Cylon';
 
 var_dump($user);
 
-//$andy = new User(3);
-//
-//if(isset($andy->fname))
-//{
-//    $andy->fname = 'Andrew';
-//}else{
-//    $andy->fname = 'Andy';
-//    $andy->lname = 'Hawkins';
-//}
-//
-//var_dump($andy);
+$andy = new User(3);
+
+if(isset($andy->fname))
+{
+    $andy->fname = 'Andrew';
+}else{
+    $andy->fname = 'Andy';
+    $andy->lname = 'Hawkins';
+}
+
+var_dump($andy);

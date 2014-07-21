@@ -2,6 +2,8 @@
 
 ##PHP: Persistent Generic Object Storage
 
+###
+
 ##Features
 - NoSQL Style Persistent Generic Object Storage
 - Easy to use / code, simply extend the desired adapter
@@ -89,6 +91,9 @@ object(User)#1 (6) {
 
 $user = new User(1);
 var_dump($user);
+var_dump($user->name);
+var_dump($user->company);
+var_dump($user->occupation);
 
 exit(); /* Not needed, just denoting execution end */
 ```
@@ -120,6 +125,9 @@ object(User)#1 (6) {
   ["__pgos_object_changed":"PGOS_Interface":private]=>
   bool(false)
 }
+string(12) "Andy Hawkins"
+string(13) "BombSquad Inc"
+string(5) "Cylon"
 ```
 
 

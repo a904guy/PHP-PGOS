@@ -2,7 +2,7 @@
 
 define('BerkeleyDBm_Path', '../tmp/database.fs');
 
-include_once('../adapter/dbm-adapter.php');
+include_once('../pgos.php');
 
 class User extends PGOS_BerkeleyDB {
     

@@ -57,6 +57,11 @@ abstract class PGOS_Interface
             $this->__pgos_object_data[$k] = $v;
         }
     }
+    public function              ___save()
+    {
+        if(method_exists($this,'___save_object') && $this->__pgos_object_changed)
+            $this->___save_object();
+    }
     protected function           ___init()
     {
         $this->___set_object_data();

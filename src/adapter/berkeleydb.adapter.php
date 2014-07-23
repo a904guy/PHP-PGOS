@@ -1,7 +1,5 @@
 <?php
 
-include_once(__DIR__.'/abstract.php');
-
 /* Oracle Berkeley DB 4/5 Storage */
 class PGOS_BerkeleyDB extends PGOS_Interface
 {

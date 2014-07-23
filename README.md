@@ -25,6 +25,9 @@
 
 ##Usage
 
+###BerkeleyDB Adapter Example
+We welcome contributions of new adapters!
+
 ###First Run
 
 ```php
@@ -145,6 +148,35 @@ Please fork, add adapters, performance fixes, anything. We welcome the love.
 
 Thanks,
 ~@ndy
+
+### Adapter Base Example
+
+File Schema:
+`src/adapter/{name}.adapter.php`;
+
+Class Schema
+```php
+class PGOS_{name} extends PGOS_Interface
+{
+
+    public function __construct()
+    {
+        $this->___init();
+    }
+    
+    protected function ___save_object()
+    {
+        /* Code to save the object on destruct */
+    }
+    
+    protected function ___load_object()
+    {
+        /* Code to load object data on init */
+        $this->__pgos_object_loaded = true;
+    }
+
+}
+```
 
 =========
 

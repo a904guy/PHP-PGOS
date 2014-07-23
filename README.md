@@ -8,13 +8,18 @@
 - NoSQL Style Persistent Generic Object Storage
 - Easy to use / code, simply extend the desired adapter
 - Saves / Loads the objects dynamic data automatically
+- Manual commit object method ___save() added.
 - Extendable, contribute your own adapter easily
+- Autoloader class for adapters
 
 ##Future (TODO)
-- Autoloader Class
 - Composer
 - Mysql, Postgres, ElasticSearch, Redis Adapters
 - Single context to __save __load methods.
+
+###Changelog
+- Added AutoClass Loader (adapter schema class PGOS_{name} : /adapter/{name}.adapter.php)
+- Added manual transaction save method ___save() for special cases when execution may fatal exit (No destructors)
 
 =========
 
@@ -27,8 +32,8 @@
 /* Define path to a writeable area */
 define('BerkeleyDBm_Path', '../tmp/database.fs');
 
-/* Include desired adapter */
-include_once('../adapter/dbm-adapter.php');
+/* Include Autoloader */
+include_once('pgos.php');
 
 class User extends PGOS_BerkeleyDB {
     

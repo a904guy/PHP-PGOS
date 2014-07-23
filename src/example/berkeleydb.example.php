@@ -1,8 +1,8 @@
 <?php
 
-define('BerkeleyDBm_Path', '../tmp/database.fs');
+define('BerkeleyDBm_Path', __DIR__.'/../tmp/database.fs');
 
-include_once('../pgos.php');
+include_once(__DIR__.'/../pgos.php');
 
 class User extends PGOS_BerkeleyDB {
     
@@ -30,7 +30,7 @@ $andy = new User(3);
 
 if(isset($andy->fname))
 {
-    $andy->fname = 'Andrew';
+    //$andy->fname = 'Andrew';
 }else{
     $andy->fname = 'Andy';
     $andy->lname = 'Hawkins';

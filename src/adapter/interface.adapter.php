@@ -47,7 +47,7 @@ abstract class PGOS_Interface
     }
     protected function           ___set_object_name()
     {
-        $this->__pgos_object_name = crc32(get_class($this).json_encode($this->__pgos_object_data));
+        $this->__pgos_object_name = get_class($this).'_'.crc32(get_class($this).json_encode($this->__pgos_object_data));
     }
     protected function           ___set_object_data()
     {

@@ -67,23 +67,23 @@ abstract class PGOS_Interface
             $this->__pgos_object_data[$k] = $v;
         }
     }
+    abstract public function     ___save_object();
     public function              ___save()
     {
-        if(method_exists($this,'___save_object') && $this->__pgos_object_changed)
+        if($this->__pgos_object_changed)
             $this->___save_object();
     }
+    abstract public function     ___load_object();
     protected function           __construct()
     {
         $this->___set_object_data();
         $this->___set_object_name();
         $this->___set_object_registry();
-        if(method_exists($this,'___load_object'))
-            $this->___load_object();
+        $this->___load_object();
     }
     function                     __destruct()
     {
-        /* Make sure parent contains save method */
-        if(method_exists($this,'___save_object') && $this->__pgos_object_changed)
+        if($this->__pgos_object_changed)
             $this->___save_object();
     }
 }

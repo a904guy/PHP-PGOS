@@ -72,7 +72,7 @@ abstract class PGOS_Interface
         if(method_exists($this,'___save_object') && $this->__pgos_object_changed)
             $this->___save_object();
     }
-    protected function           ___init()
+    protected function           __construct()
     {
         $this->___set_object_data();
         $this->___set_object_name();

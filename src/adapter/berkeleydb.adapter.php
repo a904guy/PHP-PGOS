@@ -4,11 +4,6 @@
 class PGOS_BerkeleyDB extends PGOS_Interface
 {
     
-    public function __construct()
-    {
-        $this->___init();
-    }
-    
     protected function ___save_object()
     {
         $handle = dba_open(BerkeleyDBm_Path, "c", "db4");

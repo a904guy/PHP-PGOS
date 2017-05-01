@@ -1,6 +1,6 @@
 # PHP-PGOS
  
-##P HP: Persistent Generic Object Storage
+## PHP: Persistent Generic Object Storage
  
 #### Modeled after [ZODB](http://www.zodb.org/en/latest/) for Python
  

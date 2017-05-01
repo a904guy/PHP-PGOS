@@ -1,34 +1,34 @@
-#PHP-PGOS
-
-##PHP: Persistent Generic Object Storage
-
-####Modeled after [ZODB](http://www.zodb.org/en/latest/) for Python
-
-##Features
+# PHP-PGOS
+ 
+##P HP: Persistent Generic Object Storage
+ 
+#### Modeled after [ZODB](http://www.zodb.org/en/latest/) for Python
+ 
+## Features
 - NoSQL Style Persistent Generic Object Storage
 - Easy to use / code, simply extend the desired adapter
 - Saves / Loads the objects dynamic data automatically
 - Manual commit object method ___save() added.
 - Extendable, contribute your own adapter easily
 - Autoloader class for adapters
-
-##Future (TODO)
+ 
+## Future (TODO)
 - Composer
 - Mysql, Postgres, ElasticSearch, Redis Adapters
 - Single context to __save __load methods.
-
-###Changelog
+ 
+### Changelog
 - Added AutoClass Loader (adapter schema class PGOS_{name} : /adapter/{name}.adapter.php)
 - Added manual transaction save method ___save() for special cases when execution may fatal exit (No destructors)
+ 
+========= 
+ 
+## Usage 
 
-=========
-
-##Usage
-
-###BerkeleyDB Adapter Example
+### Below is a BerkeleyDB Adapter Example
 We welcome contributions of new adapters!
 
-###First Run
+### First Run
 
 ```php
 
@@ -64,7 +64,7 @@ exit(); /* Object is stored and on next load will be available for reference */
 
 ```
 
-###Output
+### Output
 
 ```
 object(User)#1 (6) {
@@ -93,7 +93,7 @@ object(User)#1 (6) {
 }
 ```
 
-###Second Run
+### Second Run
 
 ```php
 
@@ -106,7 +106,7 @@ var_dump($user->occupation);
 exit(); /* Not needed, just denoting execution end */
 ```
 
-###Ouput
+### Ouput
 
 ```
 object(User)#1 (6) {
